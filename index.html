@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ski Runner</title>
+    <script src="./lib/game.js"></script>
+    <script src="./lib/gameView.js"></script>
+  </head>
+  <body>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <script type="text/javascript">
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+      var game = new SkiRunner.Game();
+      new SkiRunner.GameView(game, ctx).start();
+    </script>
+  </body>
+</html>
