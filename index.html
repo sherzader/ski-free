@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Ski Free</title>
+    <script src="./lib/skier.js"></script>
     <script src="./lib/game.js"></script>
     <script src="./lib/gameView.js"></script>
     <style>
@@ -19,7 +20,7 @@
       var canvas = document.getElementById("canvas");
       var ctx = canvas.getContext("2d");
       var game = new SkiFree.Game(canvas.width, canvas.height);
-      new SkiFree.GameView(game, ctx).start();
+      new SkiFree.GameView(game, ctx, canvas).start();
     </script>
   </body>
 </html>
