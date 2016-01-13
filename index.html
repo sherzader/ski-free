@@ -22,7 +22,8 @@
       var canvas = document.getElementById("canvas");
       var ctx = canvas.getContext("2d");
       var game = new SkiFree.Game(canvas.width, canvas.height);
-      new SkiFree.GameView(game, ctx, canvas).start();
+      var gameView = new SkiFree.GameView(game, ctx, canvas);
+      gameView.start();
     </script>
   </body>
 </html>
