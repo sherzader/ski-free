@@ -3,27 +3,48 @@
   <head>
     <meta charset="utf-8">
     <title>Ski Free</title>
+    <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
     <script src="./lib/mogul.js"></script>
     <script src="./lib/tree.js"></script>
     <script src="./lib/skier.js"></script>
     <script src="./lib/game.js"></script>
     <script src="./lib/gameView.js"></script>
     <style>
+      img {
+        width: 400px;
+        position: fixed;
+      }
       #canvas {
+        margin-left: 30%;
         border-color: #000;
         border-style: solid;
         border-radius: 4px;
       }
+      .header {
+        text-align: center;
+        font-family: 'VT323';
+        font-size: 80px;
+      }
+      .footer {
+        position: fixed;
+        margin-left: 25%;
+        margin-right: 15%;
+        bottom: 0px;
+        font-family: 'VT323';
+        font-size: 78px;
+      }
     </style>
   </head>
   <body>
+    <div class="header">Ski Free</div>
+    <img src="./assets/yeti.jpg" alt="" />
     <canvas id="canvas" width="600" height="600"></canvas>
     <script type="text/javascript">
       var canvas = document.getElementById("canvas");
       var ctx = canvas.getContext("2d");
       var game = new SkiFree.Game(canvas.width, canvas.height);
       var gameView = new SkiFree.GameView(game, ctx, canvas);
-      gameView.start();
     </script>
+    <div class="footer">Press Spacebar to Begin</div>
   </body>
 </html>
