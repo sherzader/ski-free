@@ -8,7 +8,7 @@
 
 My implementation of the classic [Microsoft game][wiki] by Chris Pirih. Written in pure, vanilla JavaScript and HTML5 Canvas.
 
-[game-view]: (https://github.com/sherzader/ski-free/assets/game-view.png)
+![Alt text](https://github.com/sherzader/ski-free/blob/gh-pages/assets/game-view.png)
 
 ## Features
 * Game begins upon triggering of keydown handler
