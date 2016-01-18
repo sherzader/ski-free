@@ -10,9 +10,30 @@
     <script src="./lib/game.js"></script>
     <script src="./lib/gameView.js"></script>
     <style>
-      img {
-        width: 400px;
+      .yeti-img {
+        width: 380px;
         position: fixed;
+      }
+      .right-panel {
+        position: fixed;
+        margin-left: 70%;
+        margin-bottom: 50%;
+      }
+      .keys-img {
+        position: relative;
+        right: -60%;
+        top: -560px;
+      }
+      .keys-info {
+        position: relative;
+        right: -55%;
+        top: -550px;
+        width: 200px;
+        font-family: 'VT323';
+        font-size: 40px;
+      }
+      ol {
+        width: 200px;
       }
       #canvas {
         margin-left: 30%;
@@ -24,27 +45,41 @@
         text-align: center;
         font-family: 'VT323';
         font-size: 80px;
+        width: 300px;
+        margin-left: 42%;
+        margin-right: 40%;
       }
       .footer {
         position: fixed;
-        margin-left: 25%;
+        margin-bottom: 2%;
+        margin-left: 44%;
         margin-right: 15%;
         bottom: 0px;
         font-family: 'VT323';
-        font-size: 78px;
+        font-size: 30px;
+        text-align: center;
       }
     </style>
   </head>
   <body>
     <div class="header">Ski Free</div>
-    <img src="./assets/yeti.jpg" alt="" />
+    <img src="./assets/yeti.jpg" class="yeti-img" alt="" />
     <canvas id="canvas" width="600" height="600"></canvas>
+    <div class="right-panel">
+      <img src="./assets/arrow-keys.gif" class="keys-img" alt="" />
+      <div class="keys-info">
+        <ol>
+          <li>Up to Begin</li>
+          <li>Left, Right, & Down<br />to avoid crashing!</li>
+        </ol>
+      </div>
+    </div>
     <script type="text/javascript">
       var canvas = document.getElementById("canvas");
       var ctx = canvas.getContext("2d");
       var game = new SkiFree.Game(canvas.width, canvas.height);
       var gameView = new SkiFree.GameView(game, ctx, canvas);
     </script>
-    <div class="footer">Press Spacebar to Begin</div>
+    <div class="footer">Made By Sheri Zada</div>
   </body>
 </html>
