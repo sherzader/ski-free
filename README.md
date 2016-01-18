@@ -2,13 +2,13 @@
 
 [Live][game]
 
-[game]: sherzader.github.io/ski-free
+[game]: http://sherzader.github.io/ski-free
 [wiki]: https://en.wikipedia.org/wiki/SkiFree
 ## About Game
 
 My implementation of the classic [Microsoft game][wiki] by Chris Pirih. Written in pure, vanilla JavaScript and HTML5 Canvas.
 
-[game-view]: (https://github.com/sherzader/ski-free/gh-pages/assets/game-view.png)
+[game-view]: (https://github.com/sherzader/ski-free/assets/game-view.png)
 
 ## Features
 * Game begins upon triggering of keydown handler
