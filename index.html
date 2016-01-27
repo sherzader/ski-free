@@ -75,11 +75,15 @@
         </ol>
       </div>
     </div>
+    <!-- <div id="score"></div> -->
     <script type="text/javascript">
       var canvas = document.getElementById("canvas");
       var ctx = canvas.getContext("2d");
       var game = new SkiFree.Game(canvas.width, canvas.height);
       var gameView = new SkiFree.GameView(game, ctx, canvas);
+      // setInterval(function() {
+      //   document.getElementById("score").innerHTML = game.points;
+      // }, 300);
     </script>
     <div class="footer">Made By Sheri Zada, <a href="https://github.com/sherzader/ski-free">code</a></div>
   </body>
