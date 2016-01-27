@@ -7,6 +7,7 @@
 ## About Game
 
 My implementation of the classic [Microsoft game][wiki] by Chris Pirih. Written in pure, vanilla JavaScript and HTML5 Canvas.
+Complete with a Score Board to catalyze your gaming addiction.
 
 ![Alt text](https://github.com/sherzader/ski-free/blob/gh-pages/assets/game-view.png)
 
