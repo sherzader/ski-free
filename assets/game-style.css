@@ -1,0 +1,77 @@
+@media (min-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+  .col-6 { clear: none; }
+}
+@media (min-width: 481px) {
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .col-6 { clear: none; }
+}
+@media (min-width: 641px) {
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .col-6 { clear: none; }
+}
+@media (min-width: 961px) {
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media (min-width: 1025px) {
+/* big landscape tablets, laptops, and desktops */
+}
+@media (min-width: 1281px) { /* hi-res laptops and desktops */ }
+
+.yeti-img {
+  margin-top: 5%;
+  max-width: 380px;
+  position: fixed;
+}
+
+.right-panel {
+  position: fixed;
+  margin-left: 70%;
+  margin-bottom: 50%;
+}
+.keys-img {
+  position: relative;
+  right: -60%;
+  top: -560px;
+}
+.keys-info {
+  position: relative;
+  right: -55%;
+  top: -550px;
+  width: 200px;
+  font-family: 'VT323';
+  font-size: 40px;
+}
+ol {
+  width: 200px;
+}
+#canvas {
+  background-color: white;
+  position: relative;
+  z-index: 999;
+  margin-left: 30%;
+  border-color: #000;
+  border-style: solid;
+  border-radius: 4px;
+  margin-right: 30%;
+}
+.header {
+  z-index: 999;
+  text-align: center;
+  font-family: 'VT323';
+  font-size: 80px;
+  width: 300px;
+  margin-left: 40%;
+  margin-right: 35%;
+}
+.footer {
+  clear: both;
+  position: fixed;
+  margin-top: 5%;
+  margin-left: 40%;
+  margin-right: 35%;
+  bottom: 0%;
+  font-family: 'VT323';
+  font-size: 30px;
+  text-align: center;
+}
