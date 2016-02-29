@@ -18,25 +18,28 @@
 }
 @media (min-width: 1281px) { /* hi-res laptops and desktops */ }
 
+.container {
+  min-width: 1400px;
+  overflow: hidden;
+}
+
 .yeti-img {
-  margin-top: 5%;
+  margin-top: 100px;
   max-width: 380px;
   position: fixed;
 }
 
 .right-panel {
+  z-index: 999;
   position: fixed;
-  margin-left: 70%;
-  margin-bottom: 50%;
+  margin-top: 550px;
+  margin-left: 1100px;
 }
 .keys-img {
   position: relative;
-  right: -60%;
-  top: -560px;
 }
 .keys-info {
   position: relative;
-  right: -55%;
   top: -550px;
   width: 200px;
   font-family: 'VT323';
@@ -47,31 +50,29 @@ ol {
 }
 #canvas {
   background-color: white;
-  position: relative;
-  z-index: 999;
-  margin-left: 30%;
+  position: fixed;
+  margin-top: 100px;
+  margin-left: 400px;
   border-color: #000;
   border-style: solid;
   border-radius: 4px;
-  margin-right: 30%;
 }
 .header {
+  position: fixed;
   z-index: 999;
   text-align: center;
   font-family: 'VT323';
   font-size: 80px;
   width: 300px;
-  margin-left: 40%;
-  margin-right: 35%;
+  margin-left: 560px;
 }
 .footer {
   clear: both;
   position: fixed;
-  margin-top: 5%;
-  margin-left: 40%;
-  margin-right: 35%;
-  bottom: 0%;
+  margin-left: 560px;
+  bottom: 30px;
   font-family: 'VT323';
   font-size: 30px;
   text-align: center;
+  height: 50px;
 }
