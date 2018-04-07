@@ -31,23 +31,28 @@
           <img src="./assets/arrow-keys.gif" class="keys-img" alt="" />
           <div class="keys-info">
             <ol>
-              <li>Up to Begin</li>
-              <li>Left, Right, & Down<br />to avoid crashing!</li>
+              <li>Enter to Begin</li>
+              <li>Left, Right, & Down
+                <br />to avoid crashing!</li>
             </ol>
           </div>
         </div>
       </div>
-      </div>
+    </div>
   </div>
-    <!-- <div id="score"></div> -->
-    <script type="text/javascript">
-      var canvas = document.getElementById("canvas");
-      var ctx = canvas.getContext("2d");
-      var game = new SkiFree.Game(canvas.width, canvas.height);
-      var gameView = new SkiFree.GameView(game, ctx, canvas);
-      // setInterval(function() {
-      //   document.getElementById("score").innerHTML = game.points;
-      // }, 300);
-    </script>
-  </body>
+  <script type="text/javascript">
+    const DIRECTIONS = {
+      right: "right",
+      left: "left",
+      straight: "straight",
+      jump: "jump"
+    };
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    var game = new SkiFree.Game(canvas.width, canvas.height);
+    var gameView = new SkiFree.GameView(game, canvas);
+
+  </script>
+</body>
+
 </html>
