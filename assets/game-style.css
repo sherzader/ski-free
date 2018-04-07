@@ -1,22 +1,30 @@
 @media (min-width: 320px) {
   /* smartphones, iPhone, portrait 480x320 phones */
-  .col-6 { clear: none; }
+  .col-6 {
+    clear: none;
+  }
 }
 @media (min-width: 481px) {
-/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-  .col-6 { clear: none; }
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .col-6 {
+    clear: none;
+  }
 }
 @media (min-width: 641px) {
-/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-  .col-6 { clear: none; }
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .col-6 {
+    clear: none;
+  }
 }
 @media (min-width: 961px) {
-/* tablet, landscape iPad, lo-res laptops ands desktops */
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
 }
 @media (min-width: 1025px) {
-/* big landscape tablets, laptops, and desktops */
+  /* big landscape tablets, laptops, and desktops */
 }
-@media (min-width: 1281px) { /* hi-res laptops and desktops */ }
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+}
 
 .container {
   min-width: 1400px;
@@ -42,7 +50,7 @@
   position: relative;
   top: -550px;
   width: 200px;
-  font-family: 'VT323';
+  font-family: "VT323";
   font-size: 40px;
 }
 ol {
@@ -61,7 +69,7 @@ ol {
   position: fixed;
   z-index: 999;
   text-align: center;
-  font-family: 'VT323';
+  font-family: "VT323";
   font-size: 80px;
   width: 300px;
   margin-left: 560px;
@@ -71,7 +79,7 @@ ol {
   position: fixed;
   margin-left: 560px;
   bottom: 30px;
-  font-family: 'VT323';
+  font-family: "VT323";
   font-size: 30px;
   text-align: center;
   height: 50px;
