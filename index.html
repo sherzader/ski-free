@@ -58,7 +58,12 @@
     var ctx = canvas.getContext("2d");
     var game = new SkiFree.Game(canvas.width, canvas.height);
     var gameView = new SkiFree.GameView(game, canvas);
-
+    const setIntSetupID = setInterval(() => {
+      if (game.hasLoaded()) {
+        game.draw(DIRECTIONS.straight);
+        clearInterval(setIntSetupID);
+      }
+    }, 10);
   </script>
 </body>
 
