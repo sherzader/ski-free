@@ -10,6 +10,7 @@
   <script src="./lib/mogul.js"></script>
   <script src="./lib/tree.js"></script>
   <script src="./lib/skier.js"></script>
+  <script src="./lib/yeti.js"></script>
   <script src="./lib/game.js"></script>
   <script src="./lib/gameView.js"></script>
   <link rel="stylesheet" type="text/css" href="assets/game-style.css">
@@ -38,8 +39,8 @@
           <img src="./assets/arrow-keys.gif" class="keys-img" alt="" />
           <div class="keys-info">
             <ol>
-              <li>Enter to Begin</li>
-              <li>Left, Right, & Down
+              <li>Spacebar to Begin</li>
+              <li>Arrow keys
                 <br />to avoid crashing!</li>
             </ol>
           </div>
@@ -52,16 +53,19 @@
       right: "right",
       left: "left",
       straight: "straight",
-      jump: "jump"
+      jump: "jump",
+      xcLeft: "xcLeft",
+      xcRight: "xcRight",
     };
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
     var game = new SkiFree.Game(canvas.width, canvas.height);
     var gameView = new SkiFree.GameView(game, canvas);
-    const setIntSetupID = setInterval(() => {
+    let time = 0;
+    const token = setInterval(() => {
       if (game.hasLoaded()) {
         game.draw(DIRECTIONS.straight);
-        clearInterval(setIntSetupID);
+        clearInterval(token);
       }
     }, 10);
   </script>
