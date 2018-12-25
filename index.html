@@ -22,7 +22,7 @@
       <aside><img src="./assets/yeti.jpg" class="yeti-img" alt="" /></aside>
       <main>
         <h1 class="header">Ski Free</h1>
-        <canvas id="canvas" height="500"></canvas>
+        <canvas id="canvas"></canvas>
         <footer class="footer">
           <a href="https://en.wikipedia.org/wiki/SkiFree" target="_blank">Clone</a>
           recreated
@@ -51,17 +51,20 @@
     };
     const canvas = document.getElementById("canvas");
     const totalBorderWidth = 6;
-    const headerWidth = 44;
-    const footerWidth = 44;
+    const header = document.querySelector(".header");
+    const headerHeight = header.offsetTop * 2 + header.offsetHeight;
+    const footerHeight = document.querySelector(".footer").offsetHeight;
+
     const setCanvasDimensions = () => {
       if (window.innerWidth <= 800) {
         canvas.width = window.innerWidth - totalBorderWidth;
       } else {
         canvas.width = window.innerWidth / 2 - totalBorderWidth;
       }
+      canvas.height = window.innerHeight - totalBorderWidth - headerHeight - footerHeight;
     }
     window.addEventListener("resize", setCanvasDimensions);
-    setCanvasDimensions()
+    window.addEventListener("load", setCanvasDimensions)
     const ctx = canvas.getContext("2d");
     const game = new SkiFree.Game(canvas.width, canvas.height);
     const gameView = new SkiFree.GameView(game, canvas);
