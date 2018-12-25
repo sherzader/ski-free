@@ -1,86 +1,65 @@
-@media (min-width: 320px) {
-  /* smartphones, iPhone, portrait 480x320 phones */
-  .col-6 {
-    clear: none;
-  }
+@media (max-width: 320px) {
+    /* smartphones, iPhone, portrait 480x320 phones */
 }
-@media (min-width: 481px) {
-  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-  .col-6 {
-    clear: none;
-  }
+@media (max-width: 800px) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    aside {
+        display: none;
+    }
 }
-@media (min-width: 641px) {
-  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-  .col-6 {
-    clear: none;
-  }
+@media (max-width: 641px) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 }
-@media (min-width: 961px) {
-  /* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (max-width: 961px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
 }
-@media (min-width: 1025px) {
-  /* big landscape tablets, laptops, and desktops */
+@media (max-width: 1025px) {
+    /* big landscape tablets, laptops, and desktops */
 }
-@media (min-width: 1281px) {
-  /* hi-res laptops and desktops */
+@media (max-width: 1281px) {
+    /* hi-res laptops and desktops */
+}
+body {
+    margin: 0;
 }
 
 .container {
-  min-width: 1400px;
-  overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.yeti-img {
-  margin-top: 100px;
-  max-width: 380px;
-  position: fixed;
-}
-
-.right-panel {
-  z-index: 999;
-  position: fixed;
-  margin-top: 550px;
-  margin-left: 1100px;
-}
+.yeti-img,
 .keys-img {
-  position: relative;
+    width: 100%;
+    height: auto;
 }
+aside {
+    max-width: 300px;
+}
+aside.right-panel {
+    margin-left: 20px;
+}
+
 .keys-info {
-  position: relative;
-  top: -550px;
-  width: 200px;
-  font-family: "VT323";
-  font-size: 40px;
+    font-family: "VT323";
+    font-size: 33px;
 }
-ol {
-  width: 200px;
-}
+
 #canvas {
-  background-color: white;
-  position: fixed;
-  margin-top: 100px;
-  margin-left: 400px;
-  border-color: #000;
-  border-style: solid;
-  border-radius: 4px;
+    background-color: white;
+    border-color: #000;
+    border-style: solid;
+    border-radius: 4px;
 }
 .header {
-  position: fixed;
-  z-index: 999;
-  text-align: center;
-  font-family: "VT323";
-  font-size: 80px;
-  width: 300px;
-  margin-left: 560px;
+    text-align: center;
+    font-family: "VT323";
+    font-size: 5vw;
+    height: 44px;
 }
 .footer {
-  clear: both;
-  position: fixed;
-  margin-left: 560px;
-  bottom: 30px;
-  font-family: "VT323";
-  font-size: 30px;
-  text-align: center;
-  height: 50px;
+    font-family: "VT323";
+    font-size: 4vw;
+    text-align: center;
 }

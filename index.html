@@ -1,54 +1,46 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <title>Ski Free</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
-  <script src="./lib/mogul.js"></script>
-  <script src="./lib/tree.js"></script>
-  <script src="./lib/skier.js"></script>
-  <script src="./lib/yeti.js"></script>
-  <script src="./lib/game.js"></script>
-  <script src="./lib/gameView.js"></script>
-  <link rel="stylesheet" type="text/css" href="assets/game-style.css">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Ski Free</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+      user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'
+      type='text/css'>
+    <script src="./lib/mogul.js"></script>
+    <script src="./lib/tree.js"></script>
+    <script src="./lib/skier.js"></script>
+    <script src="./lib/yeti.js"></script>
+    <script src="./lib/game.js"></script>
+    <script src="./lib/gameView.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/game-style.css">
+  </head>
 
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="col-3 col-m-3">
-        <img src="./assets/yeti.jpg" class="yeti-img" alt="" />
-      </div>
-      <div class="clearfix visible-sm"></div>
-      <div class="col-6 col-m-9">
-        <div class="header">Ski Free</div>
-        <canvas id="canvas" width="600" height="500"></canvas>
-        <div class="footer">
-          <a href="https://en.wikipedia.org/wiki/SkiFree">Original game</a>
+  <body>
+    <div class="container">
+      <aside><img src="./assets/yeti.jpg" class="yeti-img" alt="" /></aside>
+      <main>
+        <h1 class="header">Ski Free</h1>
+        <canvas id="canvas" height="500"></canvas>
+        <footer class="footer">
+          <a href="https://en.wikipedia.org/wiki/SkiFree" target="_blank">Clone</a>
           recreated
-          <br />By Sheri Zada,
+          <br />by Sheri Zada
           <a href="https://github.com/sherzader/ski-free">code</a>
-        </div>
-      </div>
-      <div class="clearfix visible-sm"></div>
-      <div class="col-3 col-m-3">
-        <div class="right-panel">
-          <img src="./assets/arrow-keys.gif" class="keys-img" alt="" />
-          <div class="keys-info">
-            <ol>
-              <li>Spacebar to Begin</li>
-              <li>Arrow keys
-                <br />to avoid crashing!</li>
-            </ol>
-          </div>
-        </div>
-      </div>
+        </footer>
+      </main>
+      <aside class="right-panel">
+        <img src="./assets/arrow-keys.gif" class="keys-img" alt="" />
+        <ol class="keys-info">
+          <li>Spacebar to Begin</li>
+          <li>Arrow keys
+            <br />to avoid crashing!</li>
+        </ol>
+      </aside>
     </div>
-  </div>
-  <script type="text/javascript">
+
+    <script type="text/javascript">
     const DIRECTIONS = {
       right: "right",
       left: "left",
@@ -57,10 +49,23 @@
       xcLeft: "xcLeft",
       xcRight: "xcRight",
     };
-    var canvas = document.getElementById("canvas");
-    var ctx = canvas.getContext("2d");
-    var game = new SkiFree.Game(canvas.width, canvas.height);
-    var gameView = new SkiFree.GameView(game, canvas);
+    const canvas = document.getElementById("canvas");
+    const totalBorderWidth = 6;
+    const headerWidth = 44;
+    const footerWidth = 44;
+    const setCanvasDimensions = () => {
+      if (window.innerWidth <= 800) {
+        canvas.width = window.innerWidth - totalBorderWidth;
+      } else {
+        canvas.width = window.innerWidth / 2 - totalBorderWidth;
+      }
+    }
+    window.addEventListener("resize", setCanvasDimensions);
+    setCanvasDimensions()
+    const ctx = canvas.getContext("2d");
+    const game = new SkiFree.Game(canvas.width, canvas.height);
+    const gameView = new SkiFree.GameView(game, canvas);
+    let gameStarted = false;
     let time = 0;
     const token = setInterval(() => {
       if (game.hasLoaded()) {
@@ -69,6 +74,6 @@
       }
     }, 10);
   </script>
-</body>
+  </body>
 
 </html>
