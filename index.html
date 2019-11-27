@@ -68,10 +68,10 @@
       }
       canvas.height = window.innerHeight - totalBorderWidth - headerHeight - footerHeight;
     }
-    window.addEventListener("resize", setCanvasDimensions);
-    window.addEventListener("load", () => {
-      setCanvasDimensions()
-      ctx = canvas.getContext("2d");
+    ctx = canvas.getContext("2d");
+    ctx.save();
+    const initializeGame = () => {
+      ctx.restore();
       game = new SkiFree.Game(canvas.width, canvas.height);
       gameView = new SkiFree.GameView(game, canvas);
       gameStarted = false;
@@ -82,6 +82,11 @@
           clearInterval(token);
         }
       }, 10);
+    }
+    window.addEventListener("resize", setCanvasDimensions);
+    window.addEventListener("load", () => {
+      setCanvasDimensions();
+      initializeGame();
     });
 
   </script>
